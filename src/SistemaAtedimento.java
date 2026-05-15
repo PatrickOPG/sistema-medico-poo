@@ -1,7 +1,7 @@
 public class SistemaAtedimento {
-    private String FilaAtendimento;
-    private String ListaMedico;
-    private String ListaAtendimentos;
+    private String filaAtendimento;
+    private String listaMedico;
+    private String listaAtendimentos;
 
     //metodos
 
@@ -9,15 +9,15 @@ public class SistemaAtedimento {
 
     };
 
-    private void DistribuirPaciente(){
+    private void distribuirPaciente(){
 
     };
 
-    private void AtualizarPrioridades(){
+    private void atualizarPrioridades(){
 
     };
 
-    private String GerarRelatorios(){
+    private String gerarRelatorios(){
         return "";
     };
 

@@ -1,19 +1,19 @@
 public class FilaAtendmento extends Paciente{
-    private String ListaPacientes;
+    private Atendimento[] listaPacientes;
 
     //metodos
 
-    private Paciente AdicionarPaciente(){
+    private Paciente adicionarPaciente(){
         return null;
     };
-    private Paciente RemoverPaciente(){
+    private Paciente removerPaciente(){
         return null;
     };
 
-    private Paciente ReogarnizarFila(){
+    private Paciente reogarnizarFila(){
         return null;
     };
-    private Paciente ChamarProximo(){
+    private Paciente chamarProximo(){
         return null;
     };
 }

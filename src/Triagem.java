@@ -1,18 +1,18 @@
 public class Triagem extends HistoricoClinico{
 
-    private String Sintomas;
-    private int ClassificacaoRiscos;
-    private int HorarioTriagem;
-    private String Observacoes;
+    private String sintomas;
+    private int classificacaoRiscos;
+    private int horarioTriagem;
+    private String observacoes;
 
     //metodos
 
-    private String RegistrarSintomas(){
+    private String registrarSintomas(){
         return "";
     };
     //sujestão---Patrick
-    private int ClassificarRiscos(){
-        return Prioridade + ClassificacaoRiscos;
+    private int classificarRiscos(){
+        return prioridade + classificacaoRiscos;
     };
 
 }

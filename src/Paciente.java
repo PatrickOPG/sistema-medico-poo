@@ -1,23 +1,23 @@
 public class Paciente {
-    private String Nome;
-    private int Idade;
-    protected int CPF;
-    private int Tempo_chegada;
-    protected int Prioridade;
-    private boolean Urgente_UTI;
-    private String informacao_triaem;
-    private String Historico_clinico;
+    private String nome;
+    private int idade;
+    protected int cpf;
+    private int tempoChegada;
+    protected int prioridade;
+    private boolean urgenteUti;
+    private String informacaoTriaem;
+    private String historicoClinico;
 
     //metodo
-    private String CalculaPrioridade(){
+    private String calculaPrioridade(){
         return "";
     }
     //sugestão--patrick
-    private int AtualizarPrioridade(int Prioridade){
-        return  Prioridade + 1;
+    private int atualizarPrioridade(int prioridade){
+        return  prioridade + 1;
     }
 
-    private Paciente ExibirDados(){
+    private Paciente exibirDados(){
         return null;
     };
 }

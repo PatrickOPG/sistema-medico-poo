@@ -1,19 +1,19 @@
 public class Medico extends Paciente {
     protected String nome;
-    protected   String Especialidade;
-    private int Tempo_consulta;
-    private boolean Disponivel;
+    protected String especialidade;
+    private int tempoConsulta;
+    private boolean disponivel;
 
     //metodos
-    private Atendimento AtenderPaciente(){
+    private Atendimento atenderPaciente(){
         return null;
     };
 
-    private Atendimento FinalizarConsulta(){
+    private Atendimento finalizarConsulta(){
         return null;
     };
 
-    private int CalcularTempoConsulta(){
+    private int calcularTempoConsulta(){
         //patrick: seria legal pegar tempo de inicio menos final de atendimento;
         return 0;
     };
