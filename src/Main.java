@@ -1,5 +1,6 @@
 public class Main{
     public static void main(String[] args) {
-        System.out.println("Teste de retorno");
+        Paciente joao = new Paciente("João", 10, "1234");
+        System.out.println(joao.cpf);
     }
 }

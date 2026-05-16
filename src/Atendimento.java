@@ -1,5 +1,10 @@
 //atendimento filho de medico por medico ja ter paciente assim herdando tudo que é necessario dos dois
 public class Atendimento extends Medico{
+    public Atendimento(String nome, int idade, String cpf) {
+        super(nome, idade, cpf);
+        //TODO Auto-generated constructor stub
+    }
+
     private int horarioInicio;
     private int horarioFim;
     private int duracao; // horarioFim - horarioInicio

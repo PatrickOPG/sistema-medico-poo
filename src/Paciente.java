@@ -1,7 +1,7 @@
 public class Paciente {
     private String nome;
     private int idade;
-    protected int cpf;
+    protected String cpf;
     private int tempoChegada;
     protected int prioridade;
     private boolean urgenteUti;
@@ -20,4 +20,10 @@ public class Paciente {
     private Paciente exibirDados(){
         return null;
     };
+
+    public Paciente(String nome, int idade, String cpf){
+        this.nome = nome;
+        this.idade = idade;
+        this.cpf = cpf;
+    }
 }

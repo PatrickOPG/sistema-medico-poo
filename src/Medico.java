@@ -1,4 +1,9 @@
 public class Medico extends Paciente {
+    public Medico(String nome, int idade, String cpf) {
+        super(nome, idade, cpf);
+        //TODO Auto-generated constructor stub
+    }
+
     protected String nome;
     protected String especialidade;
     private int tempoConsulta;
