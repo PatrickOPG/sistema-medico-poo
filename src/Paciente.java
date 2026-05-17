@@ -17,14 +17,21 @@ public class Paciente implements Comparable<Paciente> {
     // Código Java para comparar a prioridade de dois pacientes
     @Override
     public int compareTo(Paciente outroPaciente) {
-        // Multiplicamos por -1 para que o número MAIOR (maior urgência) venha PRIMEIRO
-        // na fila
+        // Multiplicamos por -1 para que o número maior de prioridade venha primeiro na fila
         return Integer.compare(this.prioridade, outroPaciente.getPrioridade()) * -1;
     }
 
     // Getters e Setters
     public String getNome() {
         return nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public int getIdade(){
+        return idade;
     }
 
     public int getPrioridade() {

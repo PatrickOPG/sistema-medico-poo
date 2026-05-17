@@ -18,6 +18,8 @@ public class Atendimento {
     // Registra o momento exato em que o médico chama o paciente
     public void iniciarAtendimento(){
         this.horarioInicio = new Date();
+
+        // simula o tempo de atendimento
         if (paciente.getPrioridade() >= 3){    
             try {
                 Thread.sleep(3000);

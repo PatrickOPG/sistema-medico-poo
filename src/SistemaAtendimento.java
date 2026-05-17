@@ -26,6 +26,7 @@ public class SistemaAtendimento {
         // Instancia a Triagem (pode ser uma classe ou um método controlador)
         Triagem triagem = new Triagem(sintomas, classificacaoRisco);
 
+        // Adiciona o grau de risco do Paciente
         paciente.setPrioridade(triagem.getClassificacaoRiscos());
 
 
@@ -62,6 +63,7 @@ public class SistemaAtendimento {
         }
 
         // 3. Cria e inicia o objeto Atendimento
+        
         System.out.println("\n--- Iniciando Consulta ---");
         Atendimento novoAtendimento = new Atendimento(proximoPaciente, medicoDisponivel);
         novoAtendimento.iniciarAtendimento();
