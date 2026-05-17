@@ -16,8 +16,21 @@ public class Atendimento {
     }
 
     // Registra o momento exato em que o médico chama o paciente
-    public void iniciarAtendimento() {
+    public void iniciarAtendimento(){
         this.horarioInicio = new Date();
+        if (paciente.getPrioridade() >= 3){    
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                System.out.println("Erro no atendimento");
+            }
+        } else {
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                System.out.println("Erro no atendimento");
+            }  
+        }
         System.out.println("Atendimento iniciado para " + paciente.getNome() + " com Dr(a). " + medico.getNome());
     }
 
@@ -39,7 +52,7 @@ public class Atendimento {
         // Converte milissegundos para minutos (1 minuto = 60000 ms)
         // Usamos Math.max(1, ...) para garantir que mesmo consultas de poucos segundos
         // constem como 1 minuto
-        return Math.max(1, diferencaMilissegundos / 60000);
+        return diferencaMilissegundos/1000;
     }
 
     // Imprime na tela um relatório limpo do atendimento realizado
@@ -50,7 +63,7 @@ public class Atendimento {
         System.out.println("Médico Responsável: Dr(a). " + medico.getNome()); //
         System.out.println("Início: " + horarioInicio); //
         System.out.println("Fim: " + horarioFim); //
-        System.out.println("Duração Total: " + duracao + " minuto(s)"); //
+        System.out.println("Duração Total: " + duracao + " segundo(s)"); //
         System.out.println("Sintomas na Triagem: " + paciente.getInformacaoTriagem()); //
         System.out.println("Conduta/Observações Médicas: " + observacoes); //
         System.out.println("--------------------------------------------------");

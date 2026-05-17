@@ -26,6 +26,8 @@ public class SistemaAtendimento {
         // Instancia a Triagem (pode ser uma classe ou um método controlador)
         Triagem triagem = new Triagem(sintomas, classificacaoRisco);
 
+        paciente.setPrioridade(triagem.getClassificacaoRiscos());
+
 
         // Guarda a informação da triagem no paciente para consulta médica posterior
         paciente.setInformacaoTriagem(sintomas);
@@ -36,7 +38,7 @@ public class SistemaAtendimento {
 
     // PASSO 3, 4 e 5: Distribui o paciente para um médico disponível e inicia a
     // consulta
-    public void distribuirPacienteParaAtendimento() {
+    public void distribuirPacienteParaAtendimento(){
         // 1. Busca um médico que esteja disponível
         Medico medicoDisponivel = null;
         for (Medico m : listaMedicos) {

@@ -2,8 +2,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class FilaAtendimento {
-    // Usamos Queue com a implementação PriorityQueue para ordenar por prioridade
-    // automaticamente [cite: 23]
+    // Usamos Queue com a implementação PriorityQueue para ordenar por prioridade automaticamente
     private Queue<Paciente> listaPacientes;
 
     // Construtor
@@ -18,21 +17,18 @@ public class FilaAtendimento {
                 "Paciente " + paciente.getNome() + " inserido na fila. (Prioridade: " + paciente.getPrioridade() + ")");
     }
 
-    // Espia quem é o próximo paciente de maior prioridade e o remove da fila para o
-    // atendimento [cite: 31]
+    // Espia quem é o próximo paciente de maior prioridade e o remove da fila para o atendimento 
     public Paciente chamarProximo() {
         if (listaPacientes.isEmpty()) {
             return null;
         }
         // .poll() recupera e remove o primeiro elemento da fila (o de maior prioridade)
-        // [cite: 31]
         Paciente proximo = listaPacientes.poll();
         System.out.println("Chamando próximo paciente: " + proximo.getNome() + " para a consulta.");
         return proximo;
     }
 
-    // Remove um paciente específico da fila, caso ele desista ou mude de status
-    // [cite: 31]
+    // Remove um paciente específico da fila, caso ele desista ou mude de status 
     public void removerPaciente(Paciente paciente) {
         if (this.listaPacientes.contains(paciente)) {
             this.listaPacientes.remove(paciente);
@@ -41,7 +37,7 @@ public class FilaAtendimento {
     }
 
     // Caso precise forçar a reorganização se a prioridade de alguém mudar enquanto
-    // espera [cite: 31]
+    // espera 
     public void reorganizarPaciente() {
         // Truque em Java: para reordenar uma PriorityQueue se os dados internos
         // mudarem,
