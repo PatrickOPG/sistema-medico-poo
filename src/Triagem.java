@@ -20,27 +20,7 @@ public class Triagem {
         System.out.println("Sintomas atualizados no sistema: " + this.sintomas);
     }
 
-    // Método que avalia o risco e retorna o nível final de prioridade
-    public int classificarRiscos() {
-        // Aqui entra a regra de negócio do hospital.
-        // No modelo mais simples, a prioridade pode ser o próprio nível do risco (1 a
-        // 5).
-        int prioridadeFinal = this.classificacaoRiscos;
 
-        // Exemplo de uma regra extra: Se o paciente tiver sintomas críticos no texto,
-        // o sistema pode forçar uma prioridade máxima de forma inteligente.
-        String sintomasIniciais = this.sintomas.toLowerCase();
-        if (sintomasIniciais.contains("dor no peito") || sintomasIniciais.contains("parada")
-                || sintomasIniciais.contains("desmaiado")) {
-            prioridadeFinal = 5; // Risco de vida imediato (Vermelho / Emergência)
-            this.observacoes = "Alerta: Sintomas de alta gravidade detectados automaticamente.";
-        }
-
-        System.out.println("Triagem realizada às " + horarioTriagem + ".");
-        System.out.println("Risco classificado como nível: " + prioridadeFinal);
-
-        return prioridadeFinal;
-    }
 
     // Getters e Setters
     public String getSintomas() {

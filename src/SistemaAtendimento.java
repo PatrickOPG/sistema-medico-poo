@@ -26,9 +26,6 @@ public class SistemaAtendimento {
         // Instancia a Triagem (pode ser uma classe ou um método controlador)
         Triagem triagem = new Triagem(sintomas, classificacaoRisco);
 
-        // A triagem calcula a prioridade e atualiza o paciente
-        int prioridadeCalculada = triagem.classificarRiscos();
-        paciente.setPrioridade(prioridadeCalculada);
 
         // Guarda a informação da triagem no paciente para consulta médica posterior
         paciente.setInformacaoTriagem(sintomas);
