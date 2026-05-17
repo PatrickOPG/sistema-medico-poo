@@ -1,5 +1,11 @@
 public class Main{
     public static void main(String[] args) {
-        System.out.println("Teste de retorno");
+
+        Paciente Novo=  new Paciente("Pedrin",12,123456789,12,);
+
+
+        String alerta = HistoricoClinico.gerarAlerta();
+        System.out.println("Relatorio do Paciente");
+        System.out.println(alerta);
     }
-}
+}""

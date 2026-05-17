@@ -5,8 +5,19 @@ public class Paciente {
     private int tempoChegada;
     protected int prioridade;
     private boolean urgenteUti;
-    private String informacaoTriaem;
+    private String informacaoTriagem;
     private String historicoClinico;
+
+    public Paciente(String nome,int idade,int cpf,int tempoChegada, boolean urgenteUti,  int prioridade,String informacaoTriagem,String historicoClinico) {
+        this.nome = nome;
+        this.idade=idade;
+        this.cpf = cpf;
+        this.tempoChegada=tempoChegada;
+        this.urgenteUti=urgenteUti;
+        this.informacaoTriagem=informacaoTriagem;
+        this.historicoClinico=historicoClinico;
+
+    }
 
     //metodo
     private String calculaPrioridade(){

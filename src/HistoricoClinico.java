@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HistoricoClinico extends Paciente{
     private String listaSintomas;
     private String listaAtendimento;
@@ -15,9 +17,12 @@ public class HistoricoClinico extends Paciente{
         return 0;
     };
 
-    private String gerarAlerta(){
-        return "paciente lele da cuca";
-    };
+    public static String gerarAlerta() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite o alerta: ");
+        String alerta = scanner.nextLine();
+        return alerta;
+    }
 
 
 
