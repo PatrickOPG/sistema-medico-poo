@@ -51,9 +51,7 @@ public class Atendimento {
         // Diferença em milissegundos
         long diferencaMilissegundos = horarioFim.getTime() - horarioInicio.getTime();
 
-        // Converte milissegundos para minutos (1 minuto = 60000 ms)
-        // Usamos Math.max(1, ...) para garantir que mesmo consultas de poucos segundos
-        // constem como 1 minuto
+        // Converte milissigundos em segundos
         return diferencaMilissegundos/1000;
     }
 
